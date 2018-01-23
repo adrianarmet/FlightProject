@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13241" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Airport" representedClassName="FlightProject.AirportModel" syncable="YES">
+        <attribute name="code" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="countryId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Country" representedClassName="FlightProject.CountryModel" syncable="YES">
+        <attribute name="areaCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="CurrentAirport" representedClassName="FlightProject.CurrentAirportModel" syncable="YES">
+        <attribute name="departureCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="departureCountryId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="departureLocation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="departureName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="destinationCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="destinationCountryId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="destinationLocation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="destinationName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Security" representedClassName="FlightProject.SecurityModel" syncable="YES">
+        <attribute name="token" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Country" positionX="-18" positionY="54" width="128" height="90"/>
+        <element name="CurrentAirport" positionX="0" positionY="81" width="128" height="165"/>
+        <element name="Security" positionX="-54" positionY="-9" width="128" height="60"/>
+        <element name="Airport" positionX="-27" positionY="81" width="128" height="105"/>
+    </elements>
+</model>

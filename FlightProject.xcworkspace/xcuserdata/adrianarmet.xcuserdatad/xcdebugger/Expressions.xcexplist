@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "ViewController.viewCityFormClick(sender:):ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.a">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in AirportListController.viewDidLoad():AirportListController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "print(ap[&quot;airport_code&quot;] as! String)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CalendarViewController.presentedDateUpdated(_:):CalendarViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "print(self.currentSelectedDate)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AirportListController.numberOfSections(in:):AirportListController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.homeController?.countries.count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

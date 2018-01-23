@@ -1,0 +1,18 @@
+PODS:
+  - Alamofire (4.4.0)
+  - CVCalendar (1.6.0)
+  - Kingfisher (4.6.1)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.4.0)
+  - CVCalendar (~> 1.6.0)
+  - Kingfisher (~> 4.0)
+
+SPEC CHECKSUMS:
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  CVCalendar: d6da92b579dfc1e0939e324dfffd2e1045cf69b1
+  Kingfisher: 1f9157d9c02b380cbd0b7cc890161195164eb634
+
+PODFILE CHECKSUM: 8a5e216ecdfa738dc882bd58956b84f468b581a1
+
+COCOAPODS: 1.4.0
