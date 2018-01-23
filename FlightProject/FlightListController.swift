@@ -33,6 +33,7 @@ class FlightTableViewCell: UITableViewCell {
 class FlightListController: UIViewController, UITableViewDelegate, UITableViewDataSource, SortProtocol {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var labelDescription: UILabel!
+    @IBOutlet weak var labelNotFound: UILabel!
     
     var flightDescription: String?
     var departureAirport: Airport?
@@ -61,12 +62,18 @@ class FlightListController: UIViewController, UITableViewDelegate, UITableViewDa
             .responseJSON{ response in
                 let departures = (response.result.value as? [String : Any])!["departures"] as! [String : Any]
                 let listFlight = departures["result"] as! NSArray
-                for flight in listFlight {
-                    let f = flight as! [String : AnyObject]
-                    self.flights.append(Flight(airlinesName: f["airlines_name"] as! String, airlinesLogo: f["image"] as! String, departureTime: f["simple_departure_time"] as! String, arrivalTime: f["simple_arrival_time"] as! String, duration: f["duration"] as! String, stop: f["stop"] as! String, price: Double(f["price_value"] as! String)!))
+                if(listFlight.count != 0) {
+                    for flight in listFlight {
+                        let f = flight as! [String : AnyObject]
+                        self.flights.append(Flight(airlinesName: f["airlines_name"] as! String, airlinesLogo: f["image"] as! String, departureTime: f["simple_departure_time"] as! String, arrivalTime: f["simple_arrival_time"] as! String, duration: f["duration"] as! String, stop: f["stop"] as! String, price: Double(f["price_value"] as! String)!))
+                    }
+                    self.sort(identifier: "lowest_price", index: self.sortIndex)
+                    self.labelNotFound.isHidden = true
+                    self.tableView.reloadData()
                 }
-                self.sort(identifier: "lowest_price", index: self.sortIndex)
-                self.tableView.reloadData()
+                else {
+                    self.labelNotFound.isHidden = false
+                }
         }
 
         // Do any additional setup after loading the view.
