@@ -94,7 +94,7 @@ class FlightListController: UIViewController, UITableViewDelegate, UITableViewDa
         cell.stop.text = flight.stop
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = NumberFormatter.Style.decimal
-        numberFormatter.groupingSeparator = ","
+        numberFormatter.groupingSeparator = "."
         numberFormatter.groupingSize = 3
         numberFormatter.usesGroupingSeparator = true
         let formattedString = numberFormatter.string(from: NSNumber(value: flight.price))
